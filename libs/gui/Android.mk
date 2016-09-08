@@ -39,6 +39,9 @@ LOCAL_SHARED_LIBRARIES := \
 	libutils \
 	liblog
 
+ifeq ($(TARGET_FORCE_SCREENSHOT_CPU_PATH), true)
+	LOCAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
+endif
 
 ifeq ($(call is-board-platform-in-list, mpq8092), true)
     LOCAL_CFLAGS            += -DVFM_AVAILABLE
