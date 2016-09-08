@@ -81,6 +81,10 @@ LOCAL_SHARED_LIBRARIES := \
 	libutils \
 	liblog
 
+ifeq ($(TARGET_FORCE_SCREENSHOT_CPU_PATH), true)
+	LOCAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
+endif
+
 LOCAL_MODULE := libgui
 
 ifeq ($(TARGET_BOARD_PLATFORM), tegra)
