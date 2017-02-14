@@ -3494,8 +3494,8 @@ status_t SurfaceFlinger::captureScreen(const sp<IBinder>& display,
         bool useIdentityTransform;
         Transform::orientation_flags rotation;
         status_t result;
-        bool useReadPixels;
         bool isLocalScreenshot;
+        bool useReadPixels;
     public:
         MessageCaptureScreen(SurfaceFlinger* flinger,
                 const sp<IBinder>& display,
